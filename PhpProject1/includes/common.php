@@ -1,3 +1,3 @@
 <?php
-$con = mysqli_connect("localhost", "aakash", "aakash", "lifestylestore")or die($mysqli_error($con));
+$con = mysqli_connect("localhost", "name", "password", "lifestylestore")or die($mysqli_error($con));
 session_start();
