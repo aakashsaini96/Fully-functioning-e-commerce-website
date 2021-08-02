@@ -1,7 +1,7 @@
 DESCRIPTION: This is an e-commerce website made with the help of Internshala's Web development training program 
 
 
-____________________________________________SETUP_________________________________________________________________________________________				
+____________________________________________SETUP______________________________________________	
  CLone/download this repo to your system
  Start the Apache and MySQL modules using the XAMPP controller.
  Open the phpMyAdmin and create a database "lifestylestore"
