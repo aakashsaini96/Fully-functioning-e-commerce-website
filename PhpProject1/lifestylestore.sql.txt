@@ -1,0 +1,21 @@
+CREATE TABLE users (user_id INT(10) AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50), email VARCHAR(50), password VARCHAR(50), contact BIGINT(10), city VARCHAR(50), address TEXT);
+
+CREATE TABLE users_items (user_id INT(10), item_id INT(10), status VARCHAR(20));
+
+ALTER TABLE `users_items` ADD CONSTRAINT `first` FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+CREATE TABLE items (id INT(10) AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50), price INT(10));
+INSERT INTO items VALUES (1, 'Cannon EOS', 36000);
+INSERT INTO items VALUES (2, 'Nikon EOS', 40000);
+INSERT INTO items VALUES (3, 'Sony DSLR', 50000);
+INSERT INTO items VALUES (4, 'Olympus DSLR', 50000);
+INSERT INTO items VALUES (5, 'Titan Model #301', 13000);
+INSERT INTO items VALUES (6, 'Titan Model #201', 3000);
+INSERT INTO items VALUES (7, 'HMT Milan', 8000);
+INSERT INTO items VALUES (8, 'Faber Luba #111', 18000);
+INSERT INTO items VALUES (9, 'H&W', 800);
+INSERT INTO items VALUES (10, 'Luis Phil', 1000);
+INSERT INTO items VALUES (11, 'John Zok', 1500);
+INSERT INTO items VALUES (12, 'Jhalsani', 1300);
+
+ALTER TABLE `users_items` ADD CONSTRAINT `second` FOREIGN KEY (`item_id`) REFERENCES `items`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
